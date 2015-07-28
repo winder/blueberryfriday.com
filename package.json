@@ -1,0 +1,12 @@
+{
+  "name": "blueberryfriday.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Error: no build specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#v3.9.0",
+    "gulp-jade": "phated/gulp-jade#v1.0.1",
+    "gulp-sass": "dlmanning/gulp-sass#v2.0.2"
+  }
+}
