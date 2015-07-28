@@ -1,18 +1,21 @@
 language: node_js
 sudo: false
 node_js:
-   - '0.10'
+- '0.10'
 before_install: npm install -g gulp
 install: npm install
 before_script: gulp
 deploy:
-   skip_cleanup: true
-   provider: s3
-   access_key_id: "AKIAJNOT4CAC5MSJ4WGQ"
-   secret_access_key:
-      secure: "ApA392WIWh/KbJEpIeLpvFxtZFYf1npPKtu1+iKM4usUhaezI+tyxw2ED46k9xN+m9qm0q3p9RZrb2Ng5+0eznsk1F2wRhU4omZ8/rkgcymdxzv3mv2+zunm5bOh/7Pf9A3DR2DsSz1RNcpKcD5GKGFoLT/2pJUvsWf1KrF6Gaz6aVpxHZYzbeUDRfkIoy8Yim6660XwP0fyOXw2hjLhSjqPC7hhYFvquj4LgzSSFAiBC7WfRPtyAWGvyDTvG9Rr6P105xUHSzFtPujCma2j/m5LJO+RZvqHu7ih1/SsuOXYrbXFr1pmBA14Ou2YnXkke7v8g109QDUJgt6bqqFg9tvbleXtw7WhIEtdSHvb7nP9u4HtlAf/vRMadIvzaPkf/2ezyNwlVGDrmVdxNnF+8ygMB5vxp/BCchevu8BLrA9iMpkWl7/aOcoMNeuLQdJA1V1f0M2CR5boXOtGmtI2rTcWPgGPdWubT4+U/T7pr3gKVoCDiBtlcs71myq1mbijMiIkbZ254b19w6nE4irNgzD4nuvbcaXIQ7lqhQaLpePlXFwMniHqWli7BAwvCBzDZPI0gHBY020do8ymickkzbn4PW7aFvkPD/C8FKQ3gegK/A5TCCnCMXF/U5Ajzj22AuBAhqppurgNBpPDG0j6hf1X/FUtChWUK6sVQ5EZa7c="
-   bucket: "blueberryfriday.com"
-   local_dir: "build"
-   acl: public_read
-   on:
-      repo: "muchprops/blueberryfriday.com"
+  skip_cleanup: true
+  provider: s3
+  access_key_id: AKIAJNOT4CAC5MSJ4WGQ
+  secret_access_key:
+    secure: ApA392WIWh/KbJEpIeLpvFxtZFYf1npPKtu1+iKM4usUhaezI+tyxw2ED46k9xN+m9qm0q3p9RZrb2Ng5+0eznsk1F2wRhU4omZ8/rkgcymdxzv3mv2+zunm5bOh/7Pf9A3DR2DsSz1RNcpKcD5GKGFoLT/2pJUvsWf1KrF6Gaz6aVpxHZYzbeUDRfkIoy8Yim6660XwP0fyOXw2hjLhSjqPC7hhYFvquj4LgzSSFAiBC7WfRPtyAWGvyDTvG9Rr6P105xUHSzFtPujCma2j/m5LJO+RZvqHu7ih1/SsuOXYrbXFr1pmBA14Ou2YnXkke7v8g109QDUJgt6bqqFg9tvbleXtw7WhIEtdSHvb7nP9u4HtlAf/vRMadIvzaPkf/2ezyNwlVGDrmVdxNnF+8ygMB5vxp/BCchevu8BLrA9iMpkWl7/aOcoMNeuLQdJA1V1f0M2CR5boXOtGmtI2rTcWPgGPdWubT4+U/T7pr3gKVoCDiBtlcs71myq1mbijMiIkbZ254b19w6nE4irNgzD4nuvbcaXIQ7lqhQaLpePlXFwMniHqWli7BAwvCBzDZPI0gHBY020do8ymickkzbn4PW7aFvkPD/C8FKQ3gegK/A5TCCnCMXF/U5Ajzj22AuBAhqppurgNBpPDG0j6hf1X/FUtChWUK6sVQ5EZa7c=
+  bucket: blueberryfriday.com
+  local_dir: build
+  acl: public_read
+  on:
+    repo: muchprops/blueberryfriday.com
+notifications:
+  slack:
+    secure: tZ3Tk2Tg6EUnSvXrnyfmdtLC2GIsV7DhdYoyHTXQ0b38QPsbTmXOqN+pHq1pgAg474Lo8HeccSPm0OmdzANUTbRVarzk2qxXOcqM1oNXNSBxIaL/ETpFG15zqav5APLtFK++3BXT356jzFOSS6D8r059a4gLIDWPlO/8ak+avI0YcCbcUlLNMLB2WUATZiErdm6PCeT3n/TG9PSHRnXiHRD/VpamdcIpn0B0kShlNnwMBPIat9quI12tExKbHUFMiA0dIXcaz4WEZCVE5WIqL5CE2r2PQuC4am4RxMe4c89ij2QxErYIDsRhZZORhHi67D62TlwbAtICV9BblQWtpA5Uk2eUAChPZ539P7noeqnXPxJAPH7J86uXerOYnezxlbkIs0ddH/g0H+fXew9kH6RbsbXWaV8bmo/LATi6j4+1bUZg1WGHEk2VjQkb8WZ1FpFpX+Mq5JLjOqTAXjCnlRAofFeid6F0bAwQ598oEDnUziyyI+brLUXhx6v1a/GO/CMh/e10hRrurfMkSAxXckViqChhOihmZgoaQiSax4Owm1AQKVz2JFYsW4pcGyhG5QGrizhtiXsPdk0nkKiLfBesygLUxtdV6oI88pb4uqzf+kyNMpRugZhGBeg3psFv7iGPcSe3aGwfxbTw1n6t8FhuN7qS3LNKW5vZZI4ber0=
