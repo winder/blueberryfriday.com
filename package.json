@@ -1,5 +1,8 @@
 {
   "name": "blueberryfriday.com",
+  "scripts": {
+    "test": "ls -al"
+  },
   "devDependencies": {
     "gulp": "gulpjs/gulp#v3.9.0",
     "gulp-jade": "phated/gulp-jade#v1.0.1",
