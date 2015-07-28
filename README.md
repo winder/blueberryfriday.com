@@ -8,4 +8,4 @@ then
     gulp default 
 or
     
-    gulp watch
+    gulp watch 
