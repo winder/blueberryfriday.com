@@ -27,3 +27,5 @@ gulp.task('watch', function () {
   gulp.watch('./src/images/**/*', ['images']);
   gulp.watch('./src/templates/**/*.jade', ['templates']);
 });
+
+gulp.task('default', ['templates', 'images', 'sass']);
